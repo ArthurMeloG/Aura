@@ -1,0 +1,98 @@
+// This is your Prisma schema file,
+// learn more about it in the docs: https://pris.ly/d/prisma-schema
+
+generator client {
+  provider = "prisma-client-js"
+  output   = "../src/generated/prisma"
+}
+
+datasource db {
+  provider = "postgresql"
+}
+
+enum Role {
+  STUDENT
+  COLLABORATOR
+  ADMIN
+}
+
+enum PostCategory {
+  EDITAL
+  EVENTO
+  AVISO
+  ACADEMICO
+  GERAL
+}
+
+enum ConversationStatus {
+  BOT
+  QUEUED
+  ACTIVE
+  CLOSED
+}
+
+model User {
+  id            String    @id @default(cuid())
+  name          String
+  email         String    @unique
+  password      String
+  role          Role      @default(STUDENT)
+  enrollment    String?
+  avatarUrl     String?
+  createdAt     DateTime  @default(now())
+  updatedAt     DateTime  @updatedAt
+
+  conversations  Conversation[] @relation("StudentConversations")
+  handledConvs   Conversation[] @relation("CollaboratorConversations")
+  messages       Message[]
+  posts          Post[]
+}
+
+model Post {
+  id          String       @id @default(cuid())
+  title       String
+  content     String
+  category    PostCategory @default(GERAL)
+  imageUrl    String?
+  published   Boolean      @default(true)
+  authorId    String
+  author      User          @relation(fields: [authorId], references: [id])
+  likesCount  Int           @default(0)
+  createdAt   DateTime      @default(now())
+  updatedAt   DateTime      @updatedAt
+}
+
+model Conversation {
+  id             String             @id @default(cuid())
+  status         ConversationStatus @default(BOT)
+  studentId      String
+  student        User               @relation("StudentConversations", fields: [studentId], references: [id])
+  collaboratorId String?
+  collaborator   User?              @relation("CollaboratorConversations", fields: [collaboratorId], references: [id])
+  messages       Message[]
+  createdAt      DateTime           @default(now())
+  updatedAt      DateTime           @updatedAt
+}
+
+model Message {
+  id             String       @id @default(cuid())
+  conversationId String
+  conversation   Conversation @relation(fields: [conversationId], references: [id])
+  senderId       String?
+  sender         User?        @relation(fields: [senderId], references: [id])
+  content        String
+  isBot          Boolean      @default(false)
+  isSystem       Boolean      @default(false)
+  createdAt      DateTime     @default(now())
+}
+
+model FaqEntry {
+  id          String   @id @default(cuid())
+  question    String
+  answer      String
+  keywords    String[]
+  category    String   @default("geral")
+  active      Boolean  @default(true)
+  createdAt   DateTime @default(now())
+  updatedAt   DateTime @updatedAt
+}

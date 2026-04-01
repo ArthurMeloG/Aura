@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+
+<html class="light" lang="pt-BR"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Central de Conversas - University Excellence</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&amp;family=Public_Sans:wght@300;400;500;600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "on-tertiary-fixed": "#3c0700",
+              "on-primary-container": "#88abed",
+              "surface-container-high": "#e7ead6",
+              "surface-variant": "#e1e4d0",
+              "surface": "#f8fbe7",
+              "tertiary-fixed": "#ffdad2",
+              "error": "#ba1a1a",
+              "on-tertiary-container": "#ff896c",
+              "on-primary": "#ffffff",
+              "secondary-fixed": "#8bfaa3",
+              "primary": "#002858",
+              "inverse-surface": "#2e3224",
+              "on-secondary-container": "#007234",
+              "tertiary-container": "#7c1800",
+              "secondary-container": "#88f7a0",
+              "secondary-fixed-dim": "#6edd89",
+              "on-primary-fixed-variant": "#1e4681",
+              "on-secondary-fixed": "#00210a",
+              "surface-bright": "#f8fbe7",
+              "surface-dim": "#d8dcc8",
+              "primary-fixed": "#d7e2ff",
+              "inverse-on-surface": "#eff3de",
+              "on-error": "#ffffff",
+              "inverse-primary": "#abc7ff",
+              "surface-tint": "#3a5e9b",
+              "on-primary-fixed": "#001b3f",
+              "surface-container-highest": "#e1e4d0",
+              "error-container": "#ffdad6",
+              "on-error-container": "#93000a",
+              "outline-variant": "#c3c6d1",
+              "tertiary-fixed-dim": "#ffb4a2",
+              "on-tertiary": "#ffffff",
+              "background": "#f8fbe7",
+              "primary-container": "#133e79",
+              "surface-container": "#ecf0dc",
+              "primary-fixed-dim": "#abc7ff",
+              "outline": "#737781",
+              "on-surface-variant": "#434750",
+              "surface-container-lowest": "#ffffff",
+              "on-surface": "#191d11",
+              "on-secondary-fixed-variant": "#005224",
+              "on-tertiary-fixed-variant": "#8a1c00",
+              "surface-container-low": "#f2f6e1"
+            },
+            fontFamily: {
+              "headline": ["Manrope"],
+              "body": ["Public Sans"],
+              "label": ["Public Sans"]
+            },
+            borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px"},
+          },
+        },
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .tap-highlight-transparent {
+            -webkit-tap-highlight-color: transparent;
+        }
+        .no-border { border: none !important; }
+        .tonal-shift { background-color: var(--tw-bg-opacity); }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-surface font-body text-on-surface antialiased min-h-screen pb-24">
+<!-- TopAppBar -->
+<header class="fixed top-0 w-full z-50 bg-[#f8fbe7]/70 dark:bg-slate-900/70 backdrop-blur-md shadow-[0_32px_32px_0_rgba(25,29,17,0.06)]">
+<div class="flex justify-between items-center px-6 h-16 w-full max-w-none">
+<div class="flex items-center gap-3">
+<div class="w-10 h-10 rounded-full overflow-hidden bg-primary-container flex items-center justify-center">
+<img alt="Institutional Logo" class="w-full h-full object-cover" data-alt="Modern university crest logo with deep blue and white accents in a clean minimalist design" src="https://lh3.googleusercontent.com/aida-public/AB6AXuC2htCfxwWlpr0h94zzIVy5SixFTsS3DGDVS9UrXZO79YiBLiaA3Nzg5XyYbL9AR1CdaV3Ai7V46ZZSvB16c07P7ItV7rDVO_y3rU3ok9Nt4hDEuSYklUCs57xZepevtD0-KjMkjVtnhbjeDkf6XLcDkrI_RPWUNcXGm7E6fEwMvdmDAvqPQEDOvjdLQshxzYRroYfg1jJY4iMaAsvEW1l9pXEU_ngOctfAkKLLfy4u_89tFF1A9YO_viXFY3MU2564-IXHlsskTMFt"/>
+</div>
+<h1 class="font-['Manrope'] tracking-tight font-bold text-xl text-[#002858] dark:text-blue-200">University Excellence</h1>
+</div>
+<div class="flex items-center gap-4">
+<button class="material-symbols-outlined text-[#002858] dark:text-blue-400 p-2 hover:bg-[#ecf0dc] transition-colors rounded-full">notifications</button>
+</div>
+</div>
+</header>
+<main class="pt-20 px-4 max-w-2xl mx-auto">
+<!-- Search Bar Section -->
+<section class="mt-4 mb-6">
+<div class="relative group">
+<span class="material-symbols-outlined absolute left-4 top-1/2 -translate-y-1/2 text-outline">search</span>
+<input class="w-full pl-12 pr-4 py-4 bg-surface-container-low border-none rounded-2xl focus:ring-2 focus:ring-primary-container transition-all text-on-surface placeholder:text-outline/70 shadow-sm" placeholder="Pesquisar conversas..." type="text"/>
+</div>
+</section>
+<!-- Quick Filters -->
+<div class="flex gap-2 mb-8 overflow-x-auto pb-2 no-scrollbar">
+<span class="px-5 py-2 bg-primary text-on-primary rounded-full text-sm font-medium whitespace-nowrap">Todas</span>
+<span class="px-5 py-2 bg-surface-container text-on-surface-variant rounded-full text-sm font-medium whitespace-nowrap">Não lidas</span>
+<span class="px-5 py-2 bg-surface-container text-on-surface-variant rounded-full text-sm font-medium whitespace-nowrap">Humanos</span>
+<span class="px-5 py-2 bg-surface-container text-on-surface-variant rounded-full text-sm font-medium whitespace-nowrap">Chatbots</span>
+</div>
+<!-- Chat List -->
+<div class="space-y-4">
+<!-- Chat Item: Human Agent (Ongoing) -->
+<div class="group relative flex items-start gap-4 p-4 rounded-2xl bg-surface-container-lowest hover:bg-surface-container transition-all cursor-pointer shadow-sm">
+<div class="relative flex-shrink-0">
+<img alt="Atendente" class="w-14 h-14 rounded-2xl object-cover" data-alt="Professional portrait of a university administrative staff member in a bright office environment" src="https://lh3.googleusercontent.com/aida-public/AB6AXuALjexIyanrVFSNkmVXxh4weq1JGyvSAxY0l9zhJR2REqp5DwXSWCavLwviORXPvyIoOaft3oMc_Kzpl20pRNeEze7Co30vQmqMElEtFvQ4__gHMw_o_YYomAWCZVXIskw9IbsgIw2elnAzQ0t4MkqBSnWJCT0nuOFYi0MAiCDdBlAZxB9X_DugYpKyFRcMUnqyNY4e2Gx6l3vlzCZnwrYWGtnxmpOJi6toC4dqRvo85khM-XVfuO73MXOXEeew2wRhAqaOzoSlCk08"/>
+<div class="absolute -bottom-1 -right-1 w-6 h-6 bg-secondary-container text-on-secondary-container rounded-full flex items-center justify-center border-2 border-surface-container-lowest">
+<span class="material-symbols-outlined text-[14px]" style="font-variation-settings: 'FILL' 1;">person</span>
+</div>
+</div>
+<div class="flex-1 min-w-0">
+<div class="flex justify-between items-start mb-1">
+<h3 class="font-headline font-bold text-on-surface truncate">Secretaria Acadêmica</h3>
+<span class="text-xs text-outline font-medium">10:45</span>
+</div>
+<p class="text-on-surface-variant text-sm line-clamp-1 mb-2">Seu requerimento foi processado e já está disponível no portal.</p>
+<div class="flex items-center gap-2">
+<span class="px-2.5 py-0.5 bg-secondary-container text-on-secondary-container text-[10px] font-bold uppercase tracking-wider rounded-full">Em andamento</span>
+<span class="text-[10px] text-outline italic">Atendente: Mariana Silva</span>
+</div>
+</div>
+</div>
+<!-- Chat Item: Chatbot (Open) -->
+<div class="group relative flex items-start gap-4 p-4 rounded-2xl bg-surface-container-lowest hover:bg-surface-container transition-all cursor-pointer shadow-sm">
+<div class="relative flex-shrink-0">
+<div class="w-14 h-14 rounded-2xl bg-primary-container flex items-center justify-center">
+<span class="material-symbols-outlined text-on-primary-container text-3xl" style="font-variation-settings: 'FILL' 1;">smart_toy</span>
+</div>
+<div class="absolute -bottom-1 -right-1 w-6 h-6 bg-primary-fixed text-primary rounded-full flex items-center justify-center border-2 border-surface-container-lowest">
+<span class="material-symbols-outlined text-[14px]">bolt</span>
+</div>
+</div>
+<div class="flex-1 min-w-0">
+<div class="flex justify-between items-start mb-1">
+<h3 class="font-headline font-bold text-on-surface truncate">Assistente de Matrícula</h3>
+<span class="text-xs text-outline font-medium">09:12</span>
+</div>
+<p class="text-on-surface font-semibold text-sm line-clamp-1 mb-2">Olá! Como posso ajudar com sua grade horária hoje?</p>
+<div class="flex items-center gap-2">
+<span class="px-2.5 py-0.5 bg-primary-fixed text-primary text-[10px] font-bold uppercase tracking-wider rounded-full">Aberto</span>
+<div class="w-2 h-2 rounded-full bg-primary animate-pulse"></div>
+</div>
+</div>
+<div class="bg-primary-container text-on-primary w-5 h-5 rounded-full flex items-center justify-center text-[10px] font-bold">2</div>
+</div>
+<!-- Chat Item: Human Agent (Finished) -->
+<div class="group relative flex items-start gap-4 p-4 rounded-2xl bg-surface-container-low/50 opacity-80 hover:bg-surface-container transition-all cursor-pointer">
+<div class="relative flex-shrink-0">
+<img alt="Atendente" class="w-14 h-14 rounded-2xl object-cover grayscale" data-alt="Portrait of a friendly male university advisor in professional attire" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCIkgoQRl8O2mBmzt_6aqTBBUDKGF20rxMwJwYyHxv5ORKzxtacTLgMKh1I8CxKHTtcHykewbbFPo34s97ZdQAkxv_S_KIToN-rg6i1e7XUgzH-CwlQ9IAsFe6wwymsXCW5YY_BM0jZqDn3mtPd23STD3Wvpu6-akvCM7F-Kp89IKABuRDPHYr00ZzIBzyh7ZWhTsjv83J1Sl57a3bezRol77XI9fCLAkXYI-3XPSZuo5Zye5ikzBKBRy6bnRjnTZB50zbhGhQApkuX"/>
+<div class="absolute -bottom-1 -right-1 w-6 h-6 bg-surface-dim text-on-surface-variant rounded-full flex items-center justify-center border-2 border-surface-container-lowest">
+<span class="material-symbols-outlined text-[14px]" style="font-variation-settings: 'FILL' 1;">person</span>
+</div>
+</div>
+<div class="flex-1 min-w-0">
+<div class="flex justify-between items-start mb-1">
+<h3 class="font-headline font-bold text-on-surface truncate">Suporte de T.I.</h3>
+<span class="text-xs text-outline font-medium">Ontem</span>
+</div>
+<p class="text-on-surface-variant text-sm line-clamp-1 mb-2">Obrigado pelo contato. O acesso ao Wi-Fi foi reestabelecido.</p>
+<div class="flex items-center gap-2">
+<span class="px-2.5 py-0.5 bg-surface-dim text-on-surface-variant text-[10px] font-bold uppercase tracking-wider rounded-full">Finalizado</span>
+</div>
+</div>
+</div>
+<!-- Chat Item: Chatbot (Finished) -->
+<div class="group relative flex items-start gap-4 p-4 rounded-2xl bg-surface-container-low/50 opacity-80 hover:bg-surface-container transition-all cursor-pointer">
+<div class="relative flex-shrink-0">
+<div class="w-14 h-14 rounded-2xl bg-surface-container-highest flex items-center justify-center">
+<span class="material-symbols-outlined text-outline text-3xl" style="font-variation-settings: 'FILL' 0;">smart_toy</span>
+</div>
+</div>
+<div class="flex-1 min-w-0">
+<div class="flex justify-between items-start mb-1">
+<h3 class="font-headline font-bold text-on-surface truncate">Biblioteca Central - Bot</h3>
+<span class="text-xs text-outline font-medium">Segunda</span>
+</div>
+<p class="text-on-surface-variant text-sm line-clamp-1 mb-2">Sua renovação de livro foi concluída com sucesso.</p>
+<div class="flex items-center gap-2">
+<span class="px-2.5 py-0.5 bg-surface-dim text-on-surface-variant text-[10px] font-bold uppercase tracking-wider rounded-full">Finalizado</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Empty State Suggestion (Subtle) -->
+<div class="mt-12 text-center pb-20">
+<p class="text-outline text-sm font-medium">Fim da lista de conversas recentes</p>
+</div>
+</main>
+<!-- Floating Action Button -->
+<button class="fixed right-6 bottom-24 w-14 h-14 bg-primary text-white rounded-2xl shadow-xl flex items-center justify-center active:scale-95 duration-200 z-40">
+<span class="material-symbols-outlined text-2xl" style="font-variation-settings: 'FILL' 1;">add_comment</span>
+</button>
+<!-- BottomNavBar -->
+<nav class="fixed bottom-0 left-0 w-full z-50 bg-white/70 dark:bg-slate-950/70 backdrop-blur-[12px] shadow-[0_-4px_24px_rgba(0,0,0,0.04)] rounded-t-2xl">
+<div class="fixed bottom-0 left-0 w-full flex justify-around items-center px-4 pb-4 pt-2">
+<!-- Feed Tab -->
+<a class="flex flex-col items-center justify-center text-slate-500 dark:text-slate-400 px-6 py-1.5 hover:bg-slate-100 dark:hover:bg-slate-800 transition-all tap-highlight-transparent" href="#">
+<span class="material-symbols-outlined mb-0.5">home</span>
+<span class="font-['Public_Sans'] text-[12px] font-medium">Feed</span>
+</a>
+<!-- Conversas Tab (ACTIVE) -->
+<a class="flex flex-col items-center justify-center bg-[#133e79] text-white rounded-2xl px-6 py-1.5 transition-all tap-highlight-transparent" href="#">
+<span class="material-symbols-outlined mb-0.5" style="font-variation-settings: 'FILL' 1;">chat</span>
+<span class="font-['Public_Sans'] text-[12px] font-medium">Conversas</span>
+</a>
+<!-- Configurações Tab -->
+<a class="flex flex-col items-center justify-center text-slate-500 dark:text-slate-400 px-6 py-1.5 hover:bg-slate-100 dark:hover:bg-slate-800 transition-all tap-highlight-transparent" href="#">
+<span class="material-symbols-outlined mb-0.5">settings</span>
+<span class="font-['Public_Sans'] text-[12px] font-medium">Configurações</span>
+</a>
+</div>
+</nav>
+</body></html>

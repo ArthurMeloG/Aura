@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+
+<html class="light" lang="pt-BR"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&amp;family=Public_Sans:wght@300;400;500;600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "on-tertiary-fixed": "#3c0700",
+              "on-primary-container": "#88abed",
+              "surface-container-high": "#e7ead6",
+              "surface-variant": "#e1e4d0",
+              "surface": "#f8fbe7",
+              "tertiary-fixed": "#ffdad2",
+              "error": "#ba1a1a",
+              "on-tertiary-container": "#ff896c",
+              "on-primary": "#ffffff",
+              "secondary-fixed": "#8bfaa3",
+              "primary": "#002858",
+              "inverse-surface": "#2e3224",
+              "on-secondary-container": "#007234",
+              "tertiary-container": "#7c1800",
+              "secondary-container": "#88f7a0",
+              "secondary-fixed-dim": "#6edd89",
+              "on-primary-fixed-variant": "#1e4681",
+              "on-secondary-fixed": "#00210a",
+              "surface-bright": "#f8fbe7",
+              "surface-container-low": "#f2f6e1",
+              "tertiary": "#550d00",
+              "on-background": "#191d11",
+              "on-secondary": "#ffffff",
+              "secondary": "#006d32",
+              "surface-dim": "#d8dcc8",
+              "primary-fixed": "#d7e2ff",
+              "inverse-on-surface": "#eff3de",
+              "on-error": "#ffffff",
+              "inverse-primary": "#abc7ff",
+              "surface-tint": "#3a5e9b",
+              "on-primary-fixed": "#001b3f",
+              "surface-container-highest": "#e1e4d0",
+              "error-container": "#ffdad6",
+              "on-error-container": "#93000a",
+              "outline-variant": "#c3c6d1",
+              "tertiary-fixed-dim": "#ffb4a2",
+              "on-tertiary": "#ffffff",
+              "background": "#f8fbe7",
+              "primary-container": "#133e79",
+              "surface-container": "#ecf0dc",
+              "primary-fixed-dim": "#abc7ff",
+              "outline": "#737781",
+              "on-surface-variant": "#434750",
+              "surface-container-lowest": "#ffffff",
+              "on-surface": "#191d11",
+              "on-secondary-fixed-variant": "#005224",
+              "on-tertiary-fixed-variant": "#8a1c00"
+            },
+            fontFamily: {
+              "headline": ["Manrope", "sans-serif"],
+              "body": ["Public Sans", "sans-serif"],
+              "label": ["Public Sans", "sans-serif"]
+            },
+            borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px"},
+          },
+        },
+      }
+    </script>
+<style>
+      .material-symbols-outlined {
+        font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+      }
+      .no-scrollbar::-webkit-scrollbar { display: none; }
+      .no-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-surface text-on-surface font-body selection:bg-primary-fixed selection:text-on-primary-fixed">
+<!-- TopAppBar -->
+<header class="fixed top-0 w-full z-50 bg-[#f8fbe7]/70 backdrop-blur-md shadow-[0_32px_32px_0_rgba(25,29,17,0.06)] flex justify-between items-center px-6 h-16 w-full max-w-none">
+<div class="flex items-center gap-3">
+<div class="w-10 h-10 rounded-full bg-primary flex items-center justify-center text-on-primary">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">account_balance</span>
+</div>
+<h1 class="text-xl font-extrabold text-[#002858] font-headline tracking-tight">University Excellence</h1>
+</div>
+<div class="flex items-center gap-2">
+<button class="w-10 h-10 flex items-center justify-center rounded-full hover:bg-[#ecf0dc] transition-colors active:scale-95 duration-200 text-[#002858]">
+<span class="material-symbols-outlined">search</span>
+</button>
+<button class="w-10 h-10 flex items-center justify-center rounded-full hover:bg-[#ecf0dc] transition-colors active:scale-95 duration-200 text-[#002858] relative">
+<span class="material-symbols-outlined">notifications</span>
+<span class="absolute top-2 right-2 w-2 h-2 bg-tertiary rounded-full"></span>
+</button>
+</div>
+</header>
+<!-- Main Content Canvas -->
+<main class="pt-20 pb-24 max-w-2xl mx-auto px-4 lg:px-0">
+<!-- Smart Feed Header -->
+<div class="mb-8 px-2">
+<p class="text-tertiary font-label font-bold text-xs uppercase tracking-[0.15em] mb-1">Destaques do Dia</p>
+<h2 class="text-3xl font-headline font-extrabold text-on-surface tracking-tight leading-tight">Olá, Acadêmico. <br/><span class="text-primary-container">Confira as novidades.</span></h2>
+</div>
+<!-- Filter Quick Access -->
+<div class="flex gap-3 overflow-x-auto no-scrollbar mb-8 pb-2">
+<button class="px-5 py-2.5 rounded-full bg-primary-container text-white font-label font-semibold text-sm shadow-sm whitespace-nowrap active:scale-95 transition-transform">Todos</button>
+<button class="px-5 py-2.5 rounded-full bg-surface-container text-on-surface font-label font-medium text-sm whitespace-nowrap hover:bg-surface-container-high transition-colors active:scale-95">Editais</button>
+<button class="px-5 py-2.5 rounded-full bg-surface-container text-on-surface font-label font-medium text-sm whitespace-nowrap hover:bg-surface-container-high transition-colors active:scale-95">Eventos</button>
+<button class="px-5 py-2.5 rounded-full bg-surface-container text-on-surface font-label font-medium text-sm whitespace-nowrap hover:bg-surface-container-high transition-colors active:scale-95">Avisos</button>
+<button class="px-5 py-2.5 rounded-full bg-surface-container text-on-surface font-label font-medium text-sm whitespace-nowrap hover:bg-surface-container-high transition-colors active:scale-95">Acadêmico</button>
+</div>
+<!-- Editorial Feed -->
+<div class="flex flex-col gap-10">
+<!-- Feed Item 1 (Editorial Image Focus) -->
+<article class="bg-surface-container-lowest rounded-3xl overflow-hidden shadow-[0_4px_24px_rgba(0,0,0,0.04)] border border-outline-variant/10">
+<div class="relative aspect-video group">
+<img alt="Academic Building" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" data-alt="modern glass university library architecture at twilight with warm interior lighting and students visible through windows" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDMm21bLJxN36z0Gs7CzDMX667Ou6Nt9BCPof6XFLVSZMuNcfGWZLfL-Vi_ttftDS1ZGNsBy1_15DTMwuH6tm4tAcoF7Pc9YDHqfDTyKyrWkJllPUrtSm_V-6L1kDqi1Ke6VT7xStXjC3JV_KhqcR7P_opMujr2NDf9QjHAoUrNiy8Y7kqOLx6mHRSJfhAeKqmKvIoZMPYDOIWRjjcRRWkc-aTzVYvd8dY3yy9amlnEpa7V7KdlzRvnOG6mhLFadxqMBxx2MDTyLuk0"/>
+<div class="absolute top-4 left-4">
+<span class="bg-tertiary-fixed text-on-tertiary-fixed px-3 py-1 rounded-full text-xs font-bold font-label uppercase tracking-wider">Edital</span>
+</div>
+</div>
+<div class="p-6">
+<div class="flex justify-between items-start mb-3">
+<time class="text-outline font-label text-xs font-medium">Postado há 2 horas • 15 Out 2023</time>
+</div>
+<h3 class="text-2xl font-headline font-bold text-on-surface leading-snug mb-3">Novas bolsas de intercâmbio para 2024: Inscrições abertas</h3>
+<p class="text-on-surface-variant font-body text-base leading-relaxed mb-6">
+                        A Reitoria anuncia a abertura de 50 vagas para mobilidade acadêmica internacional em parceria com universidades europeias.
+                    </p>
+<div class="flex items-center justify-between pt-4 border-t border-surface-container">
+<div class="flex gap-4">
+<button class="flex items-center gap-2 text-on-surface-variant hover:text-primary transition-colors">
+<span class="material-symbols-outlined text-[20px]">favorite</span>
+<span class="text-xs font-semibold">124</span>
+</button>
+<button class="flex items-center gap-2 text-on-surface-variant hover:text-primary transition-colors">
+<span class="material-symbols-outlined text-[20px]">visibility</span>
+<span class="text-xs font-semibold">Marcar lido</span>
+</button>
+</div>
+<button class="text-primary-container">
+<span class="material-symbols-outlined">bookmark</span>
+</button>
+</div>
+</div>
+</article>
+<!-- Feed Item 2 (Asymmetric Tonal Block) -->
+<article class="bg-surface-container rounded-3xl p-8 border border-outline-variant/10 relative overflow-hidden">
+<div class="absolute -right-12 -top-12 w-48 h-48 bg-secondary-container/30 rounded-full blur-3xl"></div>
+<div class="relative z-10">
+<span class="bg-secondary-container text-on-secondary-container px-3 py-1 rounded-full text-xs font-bold font-label uppercase tracking-wider">Evento</span>
+<time class="block mt-4 text-outline font-label text-xs font-medium">Amanhã, às 19:00</time>
+<h3 class="text-2xl font-headline font-bold text-on-surface leading-snug mt-2 mb-4">Simpósio de Inteligência Artificial e Ética no Campus Central</h3>
+<p class="text-on-surface-variant font-body text-base leading-relaxed mb-6">
+                        Participe do debate com especialistas globais sobre o futuro da educação na era dos algoritmos. Certificado incluso.
+                    </p>
+<div class="flex gap-3">
+<button class="bg-primary-container text-white px-6 py-2.5 rounded-xl font-label font-bold text-sm shadow-sm active:scale-95 transition-all">Garantir Vaga</button>
+<button class="bg-white text-on-surface px-4 py-2.5 rounded-xl font-label font-bold text-sm border border-outline-variant/20 active:scale-95">Detalhes</button>
+</div>
+</div>
+</article>
+<!-- Feed Item 3 (Quick Poll / Interaction) -->
+<article class="bg-surface-container-highest rounded-3xl p-6 border-l-4 border-tertiary">
+<div class="flex items-center gap-2 mb-4">
+<span class="material-symbols-outlined text-tertiary" style="font-variation-settings: 'FILL' 1;">campaign</span>
+<span class="text-tertiary font-label font-bold text-xs uppercase tracking-widest">Aviso Urgente</span>
+</div>
+<h3 class="text-xl font-headline font-bold text-on-surface mb-2">Manutenção Preventiva no Portal Acadêmico</h3>
+<p class="text-on-surface-variant font-body text-sm mb-4">O sistema ficará indisponível neste domingo das 08h às 12h para atualização de servidores.</p>
+<div class="bg-white/50 p-4 rounded-2xl flex items-center justify-between">
+<span class="text-xs font-medium text-on-surface-variant italic">Você já salvou seus relatórios?</span>
+<button class="bg-tertiary text-white px-4 py-2 rounded-lg text-xs font-bold active:scale-95">Confirmar Leitura</button>
+</div>
+</article>
+<!-- Feed Item 4 (Editorial Focus) -->
+<article class="bg-surface-container-lowest rounded-3xl overflow-hidden shadow-[0_4px_24px_rgba(0,0,0,0.04)] border border-outline-variant/10">
+<div class="relative h-64 group">
+<img alt="Students Studying" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" data-alt="diverse group of university students collaborating over laptops and coffee in a modern sunlit common area" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAsb9v4TI-_CjZ1PhdasCmWyq2UJYX5qxqCyVzUhhkaqBvztl78MsphYyUobllw54YI2hnnlJ8Z1QBQhm9fRYpfTIcV7kSTeum61yCKL22cAYelVz95Y8sH6EPWoMnjKp1UPcjVi5h-wUn0i-EnFfP_fBPRuJxXUd3-Af7DhDNvbMkMUfTpQD8gULR00Kw4hUX42c7s3mck2pFXzMJl1zgagAJdLg527aUxPpi81GDysdy4-EcUZb1Mv4_HLCDNRWVfyT0nw6DDUD5L"/>
+<div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
+<div class="absolute bottom-4 left-4 right-4 text-white">
+<span class="bg-primary-container/80 backdrop-blur-sm text-white px-3 py-1 rounded-full text-[10px] font-bold font-label uppercase tracking-widest mb-2 inline-block">Vida no Campus</span>
+<h3 class="text-xl font-headline font-bold leading-tight">Espaços de Co-working abertos 24h durante o período de provas</h3>
+</div>
+</div>
+<div class="p-6">
+<div class="flex items-center justify-between">
+<div class="flex -space-x-2">
+<div class="w-8 h-8 rounded-full border-2 border-white bg-slate-200 overflow-hidden">
+<img alt="User" data-alt="professional headshot of a young woman with a friendly expression" src="https://lh3.googleusercontent.com/aida-public/AB6AXuD53Wc5Lj_ZsjHlNI70I6jk13VNOvfvIZyinFIF2LR8ar4Vq1cyfMXT7SkaI5u4uMAfP5oZ_Cre8APo4Vuk1jJBtMTQy4cZEBPw9TUXin9jeRdVEbUJd3iLY8vxdi6zS2npw17u3wicxBWSivZRIj5gKLdp7lb8SPVVP7wz_ic0RKeuUHGI7_S0bZfslEJihPnfW9aL-CRg4O2iijtxONhD9K8KziwRk0yt8eqqZpDb5efRZ4_2IVThtxjd-oKCQhVDuEq114U6njly"/>
+</div>
+<div class="w-8 h-8 rounded-full border-2 border-white bg-slate-300 overflow-hidden text-[10px] flex items-center justify-center font-bold">+12</div>
+</div>
+<button class="flex items-center gap-2 text-primary-container font-label font-bold text-sm">
+                            Ler Mais <span class="material-symbols-outlined text-[18px]">arrow_forward</span>
+</button>
+</div>
+</div>
+</article>
+</div>
+</main>
+<!-- BottomNavBar -->
+<nav class="fixed bottom-0 left-0 w-full z-50 bg-white/70 backdrop-blur-[12px] shadow-[0_-4px_24px_rgba(0,0,0,0.04)] flex justify-around items-center px-4 pb-4 pt-2 rounded-t-2xl">
+<a class="flex flex-col items-center justify-center bg-[#133e79] text-white rounded-2xl px-6 py-1.5 transition-all tap-highlight-transparent group" href="#">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">home</span>
+<span class="font-['Public_Sans'] text-[12px] font-medium mt-1">Feed</span>
+</a>
+<a class="flex flex-col items-center justify-center text-slate-500 px-6 py-1.5 hover:bg-slate-100 transition-all tap-highlight-transparent rounded-2xl" href="#">
+<span class="material-symbols-outlined">chat</span>
+<span class="font-['Public_Sans'] text-[12px] font-medium mt-1">Conversas</span>
+</a>
+<a class="flex flex-col items-center justify-center text-slate-500 px-6 py-1.5 hover:bg-slate-100 transition-all tap-highlight-transparent rounded-2xl" href="#">
+<span class="material-symbols-outlined">settings</span>
+<span class="font-['Public_Sans'] text-[12px] font-medium mt-1">Configurações</span>
+</a>
+</nav>
+</body></html>

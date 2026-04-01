@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+
+<html class="light" lang="pt-BR"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;700;800&amp;family=Public_Sans:wght@300;400;500;600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "on-tertiary-fixed": "#3c0700",
+              "on-primary-container": "#88abed",
+              "surface-container-high": "#e7ead6",
+              "surface-variant": "#e1e4d0",
+              "surface": "#f8fbe7",
+              "tertiary-fixed": "#ffdad2",
+              "error": "#ba1a1a",
+              "on-tertiary-container": "#ff896c",
+              "on-primary": "#ffffff",
+              "secondary-fixed": "#8bfaa3",
+              "primary": "#002858",
+              "inverse-surface": "#2e3224",
+              "on-secondary-container": "#007234",
+              "tertiary-container": "#7c1800",
+              "secondary-container": "#88f7a0",
+              "secondary-fixed-dim": "#6edd89",
+              "on-primary-fixed-variant": "#1e4681",
+              "on-secondary-fixed": "#00210a",
+              "surface-bright": "#f8fbe7",
+              "surface-dim": "#d8dcc8",
+              "primary-fixed": "#d7e2ff",
+              "inverse-on-surface": "#eff3de",
+              "on-error": "#ffffff",
+              "inverse-primary": "#abc7ff",
+              "surface-tint": "#3a5e9b",
+              "on-primary-fixed": "#001b3f",
+              "surface-container-highest": "#e1e4d0",
+              "error-container": "#ffdad6",
+              "on-error-container": "#93000a",
+              "outline-variant": "#c3c6d1",
+              "tertiary-fixed-dim": "#ffb4a2",
+              "on-tertiary": "#ffffff",
+              "background": "#f8fbe7",
+              "primary-container": "#133e79",
+              "surface-container": "#ecf0dc",
+              "primary-fixed-dim": "#abc7ff",
+              "outline": "#737781",
+              "on-surface-variant": "#434750",
+              "surface-container-lowest": "#ffffff",
+              "on-surface": "#191d11",
+              "on-secondary-fixed-variant": "#005224",
+              "on-tertiary-fixed-variant": "#8a1c00"
+            },
+            fontFamily: {
+              "headline": ["Manrope"],
+              "body": ["Public Sans"],
+              "label": ["Public Sans"]
+            },
+            borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px"},
+          },
+        },
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .tap-highlight-transparent {
+            -webkit-tap-highlight-color: transparent;
+        }
+        .no-border { border: none !important; }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-surface font-body text-on-surface min-h-screen pb-24">
+<!-- TopAppBar -->
+<header class="fixed top-0 w-full z-50 bg-[#f8fbe7]/70 backdrop-blur-md shadow-[0_32px_32px_0_rgba(25,29,17,0.06)]">
+<div class="flex justify-between items-center px-6 h-16 w-full max-w-none">
+<div class="flex items-center gap-3">
+<div class="w-8 h-8 rounded-full overflow-hidden bg-primary-container flex items-center justify-center">
+<img alt="University Logo" class="w-full h-full object-cover" data-alt="minimalist graphic logo of a university shield with deep blue background and gold accents" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCxW61KyLm-O1EsB27lgfere8dHJHnZVW-fHZxUYbZ7Qb15x9P5K95k0Bag3KGjX8CeSz-bG6l3MIyW2Nduj36key_8xLmxonIi84B7x4N3iJplerW151KewiejKR8HWYn0FEU2sP37kejRcCIeyPGojXASHK2d2OeNWil98w4_wnpAO1h9okjaDuKj_DZdQ2R5VtyONtDbWuPSPLvcyoQcrJie22WYN3KDdiTdVaIVS-ESYlcumUlKrq_17R3ziXnJRjPiEMkXsioS"/>
+</div>
+<h1 class="font-['Manrope'] tracking-tight font-bold text-xl text-[#002858]">University Excellence</h1>
+</div>
+<button class="text-slate-500 hover:bg-[#ecf0dc] transition-colors p-2 rounded-full active:scale-95 duration-200">
+<span class="material-symbols-outlined">notifications</span>
+</button>
+</div>
+</header>
+<!-- Main Content Canvas -->
+<main class="pt-24 px-6 max-w-2xl mx-auto space-y-8">
+<!-- Profile Header Section -->
+<section class="flex flex-col items-center text-center space-y-4">
+<div class="relative">
+<div class="w-32 h-32 rounded-full p-1 bg-gradient-to-tr from-primary to-secondary-fixed shadow-[0_32px_32px_0_rgba(25,29,17,0.06)]">
+<img alt="User Profile" class="w-full h-full object-cover rounded-full border-4 border-surface" data-alt="portrait of a professional male academic researcher in a modern office with natural light and soft focus bookshelves" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDsXuDtPmGb9VJGiQv0fOwpQ3czVwam6MGuhMU_RAW3sM5GSWWTKYXZCJN9VN9d3yISsjkXCZS2h4bahkq1DmCgX0FShiCJuFf7KWRNe-PsxQkK8UVMrudLWKb4VJjL7NMUP44unXm5ylGyk_X_d-5jXlToTH9jM39nTvW1ndHWX6PPhwjlk_RYhNp0B5kEcKT5vHZwZdLWQP2UNLH__MoZEY8dsNEyohQh1scghZwljL9ZpyQ3qU6XD1jXWeCZgsPWhD0a44JLCL-u"/>
+</div>
+<button class="absolute bottom-0 right-0 bg-primary text-white p-2 rounded-full shadow-lg active:scale-90 transition-transform">
+<span class="material-symbols-outlined text-sm">edit</span>
+</button>
+</div>
+<div>
+<h2 class="font-headline font-extrabold text-2xl tracking-tight text-on-surface">Dr. Ricardo Almeida</h2>
+<p class="text-on-surface-variant font-medium">Matrícula: 202344091 • Coordenador Acadêmico</p>
+</div>
+</section>
+<!-- Main Navigation Options (Editorial Bento Style) -->
+<div class="grid grid-cols-1 gap-4">
+<!-- Profile Card -->
+<div class="group bg-surface-container-lowest p-5 rounded-xl flex items-center justify-between hover:bg-surface-container transition-colors cursor-pointer shadow-sm">
+<div class="flex items-center gap-4">
+<div class="w-12 h-12 rounded-full bg-primary-fixed flex items-center justify-center text-primary">
+<span class="material-symbols-outlined">person</span>
+</div>
+<div>
+<h3 class="font-bold text-lg">Perfil</h3>
+<p class="text-sm text-on-surface-variant">Dados pessoais e acadêmicos</p>
+</div>
+</div>
+<span class="material-symbols-outlined text-outline">chevron_right</span>
+</div>
+<!-- Notifications (with modern toggles) -->
+<div class="bg-surface-container-low p-6 rounded-xl space-y-6">
+<div class="flex items-center gap-4 mb-2">
+<div class="w-12 h-12 rounded-full bg-secondary-fixed flex items-center justify-center text-on-secondary-fixed">
+<span class="material-symbols-outlined">notifications_active</span>
+</div>
+<div>
+<h3 class="font-bold text-lg">Notificações</h3>
+<p class="text-sm text-on-surface-variant">Gerencie seus alertas</p>
+</div>
+</div>
+<div class="space-y-4 pt-2">
+<div class="flex items-center justify-between">
+<span class="font-medium">Alertas de Prazos</span>
+<label class="relative inline-flex items-center cursor-pointer">
+<input checked="" class="sr-only peer" type="checkbox"/>
+<div class="w-11 h-6 bg-outline-variant peer-focus:outline-none rounded-full peer peer-checked:after:translate-x-full rtl:peer-checked:after:-translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:start-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-5 after:w-5 after:transition-all peer-checked:bg-primary"></div>
+</label>
+</div>
+<div class="flex items-center justify-between">
+<span class="font-medium">Novidades do Feed</span>
+<label class="relative inline-flex items-center cursor-pointer">
+<input checked="" class="sr-only peer" type="checkbox"/>
+<div class="w-11 h-6 bg-outline-variant peer-focus:outline-none rounded-full peer peer-checked:after:translate-x-full rtl:peer-checked:after:-translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:start-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-5 after:w-5 after:transition-all peer-checked:bg-primary"></div>
+</label>
+</div>
+</div>
+</div>
+<!-- Feed Preferences -->
+<div class="group bg-surface-container-lowest p-5 rounded-xl flex items-center justify-between hover:bg-surface-container transition-colors cursor-pointer shadow-sm">
+<div class="flex items-center gap-4">
+<div class="w-12 h-12 rounded-full bg-tertiary-fixed flex items-center justify-center text-on-tertiary-fixed">
+<span class="material-symbols-outlined">dynamic_feed</span>
+</div>
+<div>
+<h3 class="font-bold text-lg">Preferências de Feed</h3>
+<p class="text-sm text-on-surface-variant">Personalize o que você vê</p>
+</div>
+</div>
+<span class="material-symbols-outlined text-outline">chevron_right</span>
+</div>
+<!-- Privacy & Security (Highlighted Section) -->
+<div class="bg-surface-container-high p-6 rounded-xl border-l-4 border-primary">
+<h3 class="font-headline font-bold text-lg mb-4 text-primary flex items-center gap-2">
+<span class="material-symbols-outlined">security</span>
+                    Privacidade e Segurança
+                </h3>
+<div class="space-y-4">
+<button class="w-full flex items-center justify-between p-2 hover:bg-surface-container rounded-lg transition-colors">
+<span class="text-sm font-medium">Alterar Senha de Acesso</span>
+<span class="material-symbols-outlined text-sm">lock</span>
+</button>
+<button class="w-full flex items-center justify-between p-2 hover:bg-surface-container rounded-lg transition-colors">
+<span class="text-sm font-medium">Autenticação em Dois Fatores</span>
+<span class="text-xs bg-primary text-white px-2 py-0.5 rounded-full">Ativo</span>
+</button>
+<button class="w-full flex items-center justify-between p-2 hover:bg-surface-container rounded-lg transition-colors">
+<span class="text-sm font-medium">Dispositivos Conectados</span>
+<span class="material-symbols-outlined text-sm">devices</span>
+</button>
+</div>
+</div>
+<!-- Secondary Actions -->
+<div class="space-y-2">
+<button class="w-full bg-surface-container-lowest p-5 rounded-xl flex items-center gap-4 hover:bg-surface-container transition-colors shadow-sm">
+<span class="material-symbols-outlined text-on-surface-variant">help</span>
+<span class="font-bold">Ajuda</span>
+</button>
+<button class="w-full bg-surface-container-lowest p-5 rounded-xl flex items-center gap-4 text-error hover:bg-error-container/20 transition-colors shadow-sm">
+<span class="material-symbols-outlined">logout</span>
+<span class="font-bold">Sair</span>
+</button>
+</div>
+</div>
+<!-- Footer Version -->
+<footer class="pt-8 pb-12 text-center">
+<p class="text-xs font-label text-outline tracking-widest uppercase">Versão 2.4.0-gold</p>
+<p class="text-[10px] text-outline mt-1 italic">© 2024 University Excellence Institutional System</p>
+</footer>
+</main>
+<!-- BottomNavBar -->
+<nav class="fixed bottom-0 left-0 w-full flex justify-around items-center px-4 pb-4 pt-2 bg-white/70 backdrop-blur-[12px] shadow-[0_-4px_24px_rgba(0,0,0,0.04)] rounded-t-2xl z-50">
+<a class="flex flex-col items-center justify-center text-slate-500 px-6 py-1.5 hover:bg-slate-100 transition-all tap-highlight-transparent" href="#">
+<span class="material-symbols-outlined" data-icon="home">home</span>
+<span class="font-['Public_Sans'] text-[12px] font-medium">Feed</span>
+</a>
+<a class="flex flex-col items-center justify-center text-slate-500 px-6 py-1.5 hover:bg-slate-100 transition-all tap-highlight-transparent" href="#">
+<span class="material-symbols-outlined" data-icon="chat">chat</span>
+<span class="font-['Public_Sans'] text-[12px] font-medium">Conversas</span>
+</a>
+<!-- ACTIVE TAB: Configurações -->
+<a class="flex flex-col items-center justify-center bg-[#133e79] text-white rounded-2xl px-6 py-1.5 transition-all tap-highlight-transparent" href="#">
+<span class="material-symbols-outlined" data-icon="settings">settings</span>
+<span class="font-['Public_Sans'] text-[12px] font-medium">Configurações</span>
+</a>
+</nav>
+</body></html>

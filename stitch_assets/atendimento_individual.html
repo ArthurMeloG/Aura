@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+
+<html class="light" lang="pt-br"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>University Excellence - Atendimento</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;700;800&amp;family=Public+Sans:wght@400;500;600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .glass-header {
+            background: rgba(248, 251, 231, 0.7);
+            backdrop-filter: blur(12px);
+        }
+        .chat-height {
+            height: calc(100vh - 144px);
+        }
+        .custom-scrollbar::-webkit-scrollbar {
+            width: 4px;
+        }
+        .custom-scrollbar::-webkit-scrollbar-track {
+            background: transparent;
+        }
+        .custom-scrollbar::-webkit-scrollbar-thumb {
+            background: #e1e4d0;
+            border-radius: 10px;
+        }
+    </style>
+<script id="tailwind-config">
+        tailwind.config = {
+          darkMode: "class",
+          theme: {
+            extend: {
+              colors: {
+                "on-tertiary-fixed": "#3c0700",
+                "on-primary-container": "#88abed",
+                "surface-container-high": "#e7ead6",
+                "surface-variant": "#e1e4d0",
+                "surface": "#f8fbe7",
+                "tertiary-fixed": "#ffdad2",
+                "error": "#ba1a1a",
+                "on-tertiary-container": "#ff896c",
+                "on-primary": "#ffffff",
+                "secondary-fixed": "#8bfaa3",
+                "primary": "#002858",
+                "inverse-surface": "#2e3224",
+                "on-secondary-container": "#007234",
+                "tertiary-container": "#7c1800",
+                "secondary-container": "#88f7a0",
+                "secondary-fixed-dim": "#6edd89",
+                "on-primary-fixed-variant": "#1e4681",
+                "on-secondary-fixed": "#00210a",
+                "surface-bright": "#f8fbe7",
+                "surface-dim": "#d8dcc8",
+                "primary-fixed": "#d7e2ff",
+                "inverse-on-surface": "#eff3de",
+                "on-error": "#ffffff",
+                "inverse-primary": "#abc7ff",
+                "surface-tint": "#3a5e9b",
+                "on-primary-fixed": "#001b3f",
+                "surface-container-highest": "#e1e4d0",
+                "error-container": "#ffdad6",
+                "on-error-container": "#93000a",
+                "outline-variant": "#c3c6d1",
+                "tertiary-fixed-dim": "#ffb4a2",
+                "on-tertiary": "#ffffff",
+                "background": "#f8fbe7",
+                "primary-container": "#133e79",
+                "surface-container": "#ecf0dc",
+                "primary-fixed-dim": "#abc7ff",
+                "outline": "#737781",
+                "on-surface-variant": "#434750",
+                "surface-container-lowest": "#ffffff",
+                "on-surface": "#191d11",
+                "on-secondary-fixed-variant": "#005224",
+                "on-tertiary-fixed-variant": "#8a1c00"
+              },
+              fontFamily: {
+                "headline": ["Manrope"],
+                "body": ["Public Sans"],
+                "label": ["Public Sans"]
+              },
+              borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px"},
+            },
+          },
+        }
+    </script>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-surface font-body text-on-surface selection:bg-primary-fixed selection:text-on-primary-fixed">
+<!-- TopAppBar -->
+<header class="fixed top-0 w-full z-50 flex justify-between items-center px-6 h-16 w-full max-w-none bg-[#f8fbe7]/70 backdrop-blur-md shadow-[0_32px_32px_0_rgba(25,29,17,0.06)]">
+<div class="flex items-center gap-3">
+<div class="w-10 h-10 rounded-full bg-primary flex items-center justify-center overflow-hidden">
+<img class="w-full h-full object-cover" data-alt="University institutional logo minimal academic crest on a white background with navy blue accents" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCffg8ry5dgpU52S9eWRC-g3Tv4S6QyusZfTw1O-1y23JT0pdlbHF3s7xHr491Y9Q0Cu4XslOAp2tB8mB76BtB8MIYYJY7rNa6Y6_LS4AfnehwQY1Fi-RKCt6YHstZq3RdlHZ85uElHLCxo1GC3R0D9WS7jvwv0dMDL6GsOAXOPq5ETIL2GxKbN52k1cCmJQfA3E9OgHg4npG0qkm71jyLR0lhv-p92V_4h66_AGxR0VSCxGUkTLuA01siD_DLycbWAuq9Z5J52CXRx"/>
+</div>
+<div class="flex flex-col">
+<h1 class="font-headline tracking-tight font-bold text-xl text-primary leading-tight">Assistente Virtual Acadêmico</h1>
+<div class="flex items-center gap-1.5">
+<span class="w-2 h-2 rounded-full bg-secondary"></span>
+<span class="text-[10px] font-label font-medium text-on-surface-variant uppercase tracking-wider">Atendimento IA • Online</span>
+</div>
+</div>
+</div>
+<div class="flex items-center gap-4 text-primary">
+<button class="material-symbols-outlined p-2 hover:bg-surface-container rounded-full transition-colors active:scale-95 duration-200">search</button>
+<button class="material-symbols-outlined p-2 hover:bg-surface-container rounded-full transition-colors active:scale-95 duration-200">more_vert</button>
+</div>
+</header>
+<!-- Main Chat Canvas -->
+<main class="pt-20 pb-24 px-4 max-w-3xl mx-auto flex flex-col gap-6 overflow-y-auto chat-height custom-scrollbar">
+<!-- Date Marker -->
+<div class="flex justify-center my-4">
+<span class="px-4 py-1 rounded-full bg-surface-container-high text-on-surface-variant text-[11px] font-label uppercase tracking-widest">Hoje, 24 de Maio</span>
+</div>
+<!-- Assistant Message -->
+<div class="flex flex-col gap-1 items-start max-w-[85%]">
+<div class="flex items-center gap-2 mb-1">
+<span class="text-[11px] font-bold text-primary-container font-headline uppercase tracking-tighter">AI Assistant</span>
+</div>
+<div class="bg-surface-container-lowest text-on-surface p-4 rounded-xl rounded-tl-none shadow-[0_4px_12px_rgba(0,0,0,0.02)] border border-outline-variant/10">
+<p class="text-sm leading-relaxed">Olá! Sou o Assistente da University Excellence. Posso te ajudar com dúvidas sobre matrículas, horários ou documentos. Como posso auxiliar hoje?</p>
+</div>
+<span class="text-[10px] text-outline px-1 mt-1">10:30 AM</span>
+</div>
+<!-- User Message -->
+<div class="flex flex-col gap-1 items-end ml-auto max-w-[85%]">
+<div class="bg-primary-container text-white p-4 rounded-xl rounded-tr-none shadow-[0_8px_16px_rgba(19,62,121,0.15)]">
+<p class="text-sm leading-relaxed">Gostaria de falar sobre o meu histórico escolar que ainda não foi atualizado após a última prova.</p>
+</div>
+<div class="flex items-center gap-1 px-1 mt-1">
+<span class="text-[10px] text-outline">10:31 AM</span>
+<span class="material-symbols-outlined text-sm text-primary" style="font-variation-settings: 'FILL' 1;">done_all</span>
+</div>
+</div>
+<!-- System Message / AI Thinking -->
+<div class="flex flex-col gap-1 items-start max-w-[85%]">
+<div class="bg-surface-container-lowest text-on-surface p-4 rounded-xl rounded-tl-none border border-outline-variant/10">
+<p class="text-sm leading-relaxed">Entendo. De acordo com nossos registros, as notas finais do semestre atual levam até 5 dias úteis para aparecer no portal após o lançamento pelo docente.</p>
+</div>
+</div>
+<!-- User Message Requesting Human -->
+<div class="flex flex-col gap-1 items-end ml-auto max-w-[85%]">
+<div class="bg-primary-container text-white p-4 rounded-xl rounded-tr-none">
+<p class="text-sm leading-relaxed">A prova foi há 10 dias. Preciso do documento urgente para um estágio. Poderia verificar com a secretaria?</p>
+</div>
+<div class="flex items-center gap-1 px-1 mt-1">
+<span class="text-[10px] text-outline">10:32 AM</span>
+</div>
+</div>
+<!-- Escalation Banner -->
+<div class="my-4 px-6 py-3 bg-surface-container-highest rounded-2xl border-l-4 border-primary shadow-sm flex items-center gap-4">
+<span class="material-symbols-outlined text-primary-container">support_agent</span>
+<p class="text-xs font-medium text-on-surface tracking-tight">
+                Você agora está falando com um colaborador da Secretaria. <br/>
+<span class="text-on-surface-variant font-normal">Tempo de espera estimado: 2 min.</span>
+</p>
+</div>
+<!-- Human Agent Message -->
+<div class="flex flex-col gap-1 items-start max-w-[85%]">
+<div class="flex items-center gap-2 mb-1">
+<div class="w-5 h-5 rounded-full overflow-hidden bg-primary-fixed">
+<img class="w-full h-full object-cover" data-alt="Portrait of a professional academic administrator smiling with a soft natural office background" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAbeBeDBpPV9SUQI8nmgcgd4kbacJCe5jKM3d_-3Zz7myvDlrAbRm1X_WKF0Rv50Scp1fpRSPI7GDaiZyfBSwGZbNY6QDyTCs1_0AuzHAPBzTBNbnJ-kJHN_p4WziFXnZjsjPEHl8wNhZi3PCosSnr-_OkDFAoHG_8ljyz-LDr2juvj6t2gPq1b6o8dr8eH16t-NZlzgsN25QUjNW8LMTW77UCGxXHw7ZPRzhdbfqJIU484WnlNef2thmr9CCiCtg1tPKf8D32eKgOD"/>
+</div>
+<span class="text-[11px] font-bold text-on-surface font-headline uppercase tracking-tighter">Dra. Mariana (Secretaria)</span>
+</div>
+<div class="bg-surface-container-lowest text-on-surface p-4 rounded-xl rounded-tl-none shadow-sm border border-outline-variant/10">
+<p class="text-sm leading-relaxed">Bom dia! Estou verificando seu registro agora mesmo. O sistema teve uma oscilação na última madrugada, mas vou forçar a atualização para você.</p>
+</div>
+<span class="text-[10px] text-outline px-1 mt-1">10:35 AM</span>
+</div>
+</main>
+<!-- Chat Input Area -->
+<footer class="fixed bottom-0 w-full z-50 bg-white/70 backdrop-blur-[12px] pt-4 pb-6 px-4">
+<div class="max-w-3xl mx-auto flex items-end gap-3">
+<div class="flex-1 bg-surface-container-low rounded-2xl flex items-end p-2 border border-outline-variant/15 focus-within:bg-surface-container-highest transition-colors duration-200">
+<button class="material-symbols-outlined p-2 text-on-surface-variant hover:text-primary transition-colors">add_circle</button>
+<textarea class="w-full bg-transparent border-none focus:ring-0 text-sm py-2 max-h-32 resize-none placeholder:text-outline font-body" placeholder="Escreva sua mensagem..." rows="1"></textarea>
+<button class="material-symbols-outlined p-2 text-on-surface-variant hover:text-primary transition-colors">sentiment_satisfied</button>
+</div>
+<button class="w-12 h-12 rounded-xl bg-gradient-to-br from-primary to-primary-container text-white flex items-center justify-center shadow-lg active:scale-95 transition-transform duration-200">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">send</span>
+</button>
+</div>
+</footer>
+<!-- Bottom Navigation Bar (Hidden on Focus/Task Focus) -->
+<!-- Suppressed for focused Task Journey as per Design System Rules -->
+<!-- Contextual FAB (Suppressed for focused Transactional screen) -->
+</body></html>
